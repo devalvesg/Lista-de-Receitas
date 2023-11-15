@@ -1,0 +1,28 @@
+*{
+    color: #403D38;
+}
+
+.navbar-container{
+    border-bottom: 2px solid #403D38;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 40px;
+}
+
+.navbar-img{
+    width: 40px;
+}
+
+.navbar-items{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.navbar-items a{
+    text-decoration: none;
+}

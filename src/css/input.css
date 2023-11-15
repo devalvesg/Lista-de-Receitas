@@ -1,0 +1,29 @@
+.input-container{
+    /* border: 1px solid red; */
+    margin: 20px auto;
+    display: flex;
+    width: 250px;
+    height: 30px;
+}
+
+.input-container input:focus input{
+    border: 2px solid #FF6000;
+}
+
+.input-container input{
+    padding-left: 15px;
+    position: absolute;
+    height: 30px;
+    border-radius: 15px;
+    border: transparent;
+    width: 250px;
+}
+
+.input-container img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: 220px;
+    top: 2px;
+    cursor: pointer;
+}
