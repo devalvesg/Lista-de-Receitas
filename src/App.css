@@ -5,9 +5,3 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 75px;
-}

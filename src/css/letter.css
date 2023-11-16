@@ -1,0 +1,23 @@
+.letters{
+    margin-top: 25px;
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.letters button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+.letters button:hover{
+    transform: scale(1.1);
+}
+
+.letters button:focus{
+    color: #FF6000;
+}
