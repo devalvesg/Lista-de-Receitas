@@ -21,23 +21,22 @@ function Home() {
                     const data = response.data
 
                     newRecipes.push(data.meals[0])
-
                 }
             } catch (error) {
                 console.log(error)
             }
+            
             setRecipes(newRecipes)
 
         }
         getRecipes(
-        )
-    }, [])
-
-
+            )
+        }, [])
+        
+        console.log(recipes)
+    
     const inputData = (inputData: Recipe[]) => {
         setRecipes(inputData)
-        console.log(recipes)
-
     }
     return (
         <div>

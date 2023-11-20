@@ -48,7 +48,7 @@
     text-decoration: none;
     transition-duration: .3s;
     position: relative;
-    z-index: 1; /* Certifique-se de que o link fique sobre o botão */
+    z-index: 1;
 }
 
 

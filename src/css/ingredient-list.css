@@ -1,0 +1,42 @@
+.ingredient-list-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ingredient-list-container .card-container{
+    height: 200px;
+}
+
+.card-button{
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.input-container button{
+    border: none;
+}
+
+.ingredient-list-container ul li a,
+.ingredient-list-container ul li{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.ingredient-list-container ul{
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    transform: translateX(25%);
+
+}
+
+.ingredient-list-container ul li a:hover{
+    color: #FF6000;
+
+}

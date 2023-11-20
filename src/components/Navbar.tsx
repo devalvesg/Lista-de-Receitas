@@ -9,7 +9,7 @@ function Navbar() {
         <Link to={"/"}><img className="navbar-img" src={Home} alt="" /></Link>
         <ul className="navbar-items">
         <Link to={"/recipe-by-letter"}><li>Receitas por letras</li></Link>
-        <Link to={"#"}><li>Receitas por ingredientes</li></Link>
+        <Link to={"/ingredient-list"}><li>Receitas por ingredientes</li></Link>
         </ul>
      </div>
     )
