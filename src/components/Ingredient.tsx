@@ -8,11 +8,21 @@ import { useEffect, useState } from 'react'
 
 
 function Ingredient() {
-    //FAZER PARECIDO COM O RECEITA POR LETRAS, SENDO SEPARADA POR LISTA, AO CLICAR VAI PRA PAGINA? OU MOSTRA TODAS RECEITAS DISPONIVEIS COM O INGREDIENTE
     const [ingredients, setIngredients] = useState<string[]>([]);
     const [value, setValue] = useState('');
+    const cachedIngredients = localStorage.getItem('cachedIngredients');
 
     const getIngredients = async () => {
+        if (cachedIngredients) {
+            setIngredients(JSON.parse(cachedIngredients));
+        } else {
+            const response = await apiUrl.get(`/list.php?i=list`);
+            const data = response.data.meals.map((item: any) => item.strIngredient);
+
+            // Atualiza o cache e o estado local
+            localStorage.setItem('cachedIngredients', JSON.stringify(data));
+            setIngredients(data);
+        }
         const response = await apiUrl.get(`/list.php?i=list`)
         const data = response.data.meals.map((item: any) => item.strIngredient)
         setIngredients(data);
@@ -37,7 +47,7 @@ function Ingredient() {
             </div>
             <div className="ingredient-list-container">
                 <ul>
-                    {ingredients.map((ingredient: string, index:number) =>
+                    {ingredients.map((ingredient: string, index: number) =>
                         ingredient.toUpperCase().includes(value.toUpperCase()) ?
                             (
                                 <li key={index}><a href={`ingredients-page?query=${encodeURIComponent(ingredient)}`}>{ingredient}</a></li>

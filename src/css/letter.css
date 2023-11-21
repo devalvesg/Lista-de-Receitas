@@ -1,5 +1,5 @@
-.letters{
-    margin-top: 25px;
+.letters {
+    margin-top: -50px;
     width: 80%;
     justify-content: center;
     display: flex;
@@ -7,17 +7,21 @@
     flex-wrap: wrap;
 }
 
-.letters button{
+.container h1 {
+    margin-top: 20px;
+}
+
+.letters button {
     cursor: pointer;
     background-color: transparent;
     border: none;
     font-size: 20px;
 }
 
-.letters button:hover{
+.letters button:hover {
     transform: scale(1.1);
 }
 
-.letters button:focus{
+.letters button:focus {
     color: #FF6000;
 }

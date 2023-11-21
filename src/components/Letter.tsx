@@ -2,9 +2,8 @@ import "../css/letter.css"
 import Navbar from './Navbar';
 import Card from './Card';
 import apiUrl from "../axios/config";
-// import Recipe from "../models/Recipe";
 
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 
 function Letter() {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -28,6 +27,7 @@ function Letter() {
         <>
             <Navbar />
             <div className="container">
+                <h1>Choose your letter</h1>
                 <header className='letters'>
                     {alf.map((letter, index) => (
                         <button key={index} onClick={() => recipeLetter(letter)}>{letter}</button>
@@ -46,7 +46,7 @@ function Letter() {
                             strYoutube={recipe.strYoutube}
                         />
 
-                    ))) : <h1>Nenhuma receita com essa letra foi encontrada. Tente novamente</h1>
+                    ))) : <h1>No recipe with that letter was found. Try again</h1>
                 }
 
             </div>

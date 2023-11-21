@@ -7,31 +7,28 @@ import apiUrl from "../axios/config"
 
 function Home() {
 
+    const [recipes, setRecipes] = useState<Recipe[]>([]);
 
-    const [recipes, setRecipes] = useState<Recipe[]>([])
     useEffect(() => {
-
-        const getRecipes = async () => {
-
-            const newRecipes = [];
-            try {
-
-                for (let i = 0; i < 20; i++) {
-                    const response = await apiUrl.get("/random.php")
-                    const data = response.data
-
-                    newRecipes.push(data.meals[0])
-                }
-            } catch (error) {
-                console.log(error)
-            }
-            
-            setRecipes(newRecipes)
-
+        const numRequests = Array.from({ length: 20 }, (_, index) => index + 1);
+  
+      const fetchRecipe = async () => {
+        try {
+          const response = await apiUrl.get(`/random.php`);
+          return response.data.meals[0]; 
+        } catch (error) {
+          throw error;
         }
-        getRecipes(
-            )
-        }, [])
+      };
+  
+      const fetchRecipes = async () => {
+          const recipePromises = numRequests.map(() => fetchRecipe());
+          const recipesData = await Promise.all(recipePromises);
+          setRecipes(recipesData);
+      };
+  
+      fetchRecipes();
+    }, []);
         
         console.log(recipes)
     
@@ -60,8 +57,8 @@ function Home() {
 
                     ))) : (<h1>{
                         recipes.length > 0
-                            ? "Nenhuma receita com esse nome foi encontrada. Tente novamente"
-                            : "Carregando..."}
+                            ? "No recipe with that name was found. Try again"
+                            : "Loading..."}
                     </h1>)
                 }
             </div>
