@@ -1,14 +1,9 @@
-import "../css/card.css"
+import "../styles/card.css"
+import {Recipe} from "../models/Recipe";
 
-interface CardProps {
-  strMeal: string,
-  strMealThumb: string,
-  strArea: string,
-  strCategory: string,
-  strYoutube: string,
-}
 
-function Card(props: CardProps) {
+
+function Card(props: Recipe) {
   const { strMeal, strMealThumb, strArea, strCategory, strYoutube } = props;
 
 
@@ -24,7 +19,7 @@ function Card(props: CardProps) {
       </div>
       <div className="card-buttons">
         <button className="card-button"><a target="_blank" href={strYoutube}>YOUTUBE</a></button>
-        <button className="card-button"><a href="#">RECIPE</a></button>
+        <button value={strMeal} className="card-button"><a href={`recipe/${strMeal}`}>RECIPE</a></button>
       </div>
     </div>
   )

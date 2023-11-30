@@ -1,0 +1,67 @@
+.container-preparation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 25px auto;
+    gap: 50px;
+}
+
+.container-preparation .description .details{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.container-preparation .description .text-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.container-preparation .description .details h4{
+    color: #FF6000;
+}
+
+.container-preparation .description {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.container-preparation .description img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.container-preparation .description h2 {
+    font-size: 30px;
+}
+
+.container-preparation .instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.container-preparation .ingredients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.container-preparation .ingredients ul{
+    font-size: 20px;
+    list-style: none;
+}

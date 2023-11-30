@@ -1,9 +1,10 @@
-import '../css/home.css'
+import '../styles/home.css'
 import Navbar from './Navbar'
 import Card from './Card'
 import Input from './Input'
 import { useEffect, useState } from 'react'
 import apiUrl from "../axios/config"
+import { Recipe } from '../models/Recipe'
 
 function Home() {
 
@@ -30,7 +31,6 @@ function Home() {
       fetchRecipes();
     }, []);
         
-        console.log(recipes)
     
     const inputData = (inputData: Recipe[]) => {
         setRecipes(inputData)

@@ -1,11 +1,10 @@
 import lupa from "../assets/procurar (1).png"
-import "../css/input.css"
+import "../styles/input.css"
 import apiUrl from "../axios/config";
 
 function Input({ inputData } : any) {
 
    const handleChange = async(e:any) => {
-      console.log("ALTERANDO INPUT" + e.target.value)
       try{
          const response = await apiUrl.get(`/search.php?s=${e.target.value}`)
          inputData(response.data.meals || [true])

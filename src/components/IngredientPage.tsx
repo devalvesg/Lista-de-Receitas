@@ -1,9 +1,10 @@
 import Navbar from './Navbar';
 import Card from './Card';
 import apiUrl from "../axios/config";
-import '../css/ingredient-page.css'
+import '../styles/ingredient-page.css'
 
 import { useEffect, useState } from 'react'
+import { Recipe } from '../models/Recipe';
 
 function IngredientPage() {
     const [recipes, setRecipe] = useState<Recipe[]>([])

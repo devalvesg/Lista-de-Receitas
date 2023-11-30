@@ -1,4 +1,4 @@
-import "../css/navbar.css"
+import "../styles/navbar.css"
 import Home from "../assets/casinha-de-cachorro.png"
 import { Link } from 'react-router-dom';
 

@@ -1,5 +1,5 @@
-import "../css/card.css"
-import "../css/ingredient-list.css"
+import "../styles/card.css"
+import "../styles/ingredient-list.css"
 import Navbar from './Navbar';
 import apiUrl from "../axios/config";
 import lupa from "../assets/procurar (1).png";

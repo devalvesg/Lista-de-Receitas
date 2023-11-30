@@ -1,9 +1,10 @@
-import "../css/letter.css"
+import "../styles/letter.css"
 import Navbar from './Navbar';
 import Card from './Card';
 import apiUrl from "../axios/config";
 
 import {useState } from 'react'
+import { Recipe } from "../models/Recipe";
 
 function Letter() {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
