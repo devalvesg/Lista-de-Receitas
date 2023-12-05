@@ -84,3 +84,7 @@
     transition-duration: .3s;
     transform: translate(100%, -50%);
 }
+
+.card-buttons .not-show{
+    display: none !important;
+}

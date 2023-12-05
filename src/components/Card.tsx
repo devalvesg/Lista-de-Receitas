@@ -18,7 +18,8 @@ function Card(props: Recipe) {
         </div>
       </div>
       <div className="card-buttons">
-        <button className="card-button"><a target="_blank" href={strYoutube}>YOUTUBE</a></button>
+        {strYoutube == null ?  <button className="card-button not-show"><a target="_blank" href={strYoutube}>YOUTUBE</a></button> :  <button className="card-button"><a target="_blank" href={strYoutube}>YOUTUBE</a></button>}
+       
         <button value={strMeal} className="card-button"><a href={`recipe/${strMeal}`}>RECIPE</a></button>
       </div>
     </div>
