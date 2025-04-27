@@ -27,7 +27,7 @@ function Letter() {
     return (
         <>
             <Navbar />
-            <div className="container">
+            <div className="container container-letters">
                 <h1>Choose your letter</h1>
                 <header className='letters'>
                     {alf.map((letter, index) => (

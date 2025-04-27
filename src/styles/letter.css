@@ -25,3 +25,9 @@
 .letters button:focus {
     color: #FF6000;
 }
+
+.container-letters {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
