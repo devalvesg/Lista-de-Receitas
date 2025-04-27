@@ -1,7 +1,9 @@
 # Lista de Receitas
 
 Este projeto é uma aplicação web **Single Page Application (SPA)** desenvolvida em **React** e **TypeScript**, que utiliza a API pública [TheMealDB](https://www.themealdb.com/api.php) para exibir e buscar receitas culinárias de diversas regiões do mundo.
+![alt text](image.png)
 
+Link: https://lista-de-receitas.vercel.app/
 ---
 
 ## 🎯 Objetivos
